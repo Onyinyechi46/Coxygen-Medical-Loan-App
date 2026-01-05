@@ -591,22 +591,7 @@
                 <button id="disconnect" class="btn" style="background: #64748b; display: none;">
                     <i class="fas fa-power-off"></i> Disconnect
                 </button>
-                <div class="smart-contract-info">
-                    <div class="contract-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Validator Hash: <code id="validatorHash">a1b2c3...</code></span>
-                    </div>
-                    <div class="contract-item">
-                        <i class="fas fa-code"></i>
-                        <span>CBOR: <code id="cborShort">5840...</code></span>
-                    </div>
-
-                    <div class="contract-item">
-                        <i class="fas fa-network-wired"></i>
-                        <span>Testnet: <code>Preprod/Preview</code></span>
-                    </div>
-                </div>
-            </section>
+                
             
             <!-- Lending Operations Section -->
             <section class="lending-section fade-in">
@@ -638,11 +623,6 @@
                         <input type="number" id="interest" min="1" step="0.5" value="25">
                         <span class="unit">ADA</span>
                     </div>
-                    <div class="interest-buttons">
-                        <button class="interest-btn" data-interest="10">10 ADA (2%)</button>
-                        <button class="interest-btn active" data-interest="25">25 ADA (5%)</button>
-                        <button class="interest-btn" data-interest="50">50 ADA (10%)</button>
-                    </div>
                 </div>
                 
                 <!-- Provider PubKeyHash -->
@@ -655,36 +635,15 @@
                 </div>
                 
                 <!-- Lending Info -->
-                <div class="lending-info">
-                    <div class="info-row">
-                        <span class="info-label">Collateral (Credit Limit)</span>
-                        <span class="info-value" id="collateralDisplay">1000 ADA</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Bill Amount</span>
-                        <span class="info-value" id="billAmountDisplay">500 ADA</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Interest</span>
-                        <span class="info-value" id="interestDisplay">25 ADA</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Total to Provider</span>
-                        <span class="info-value" id="totalToProvider">525 ADA</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">LTV Ratio</span>
-                        <span class="info-value" id="ltvRatio">50%</span>
-                    </div>
-                </div>
+
                 
                 <!-- Action Buttons -->
                 <div class="lending-actions">
-                    <button id="openCredit" class="btn btn-success">
+                    <button id="openCreditBtn" class="btn btn-success">
                         <i class="fas fa-credit-card"></i> Open Credit
                     </button>
                     
-                    <button id="repayCredit" class="btn btn-warning">
+                    <button id="repayCreditBtn" class="btn btn-warning">
                         <i class="fas fa-coins"></i> Repay Credit
                     </button>
                 </div>
@@ -744,6 +703,6 @@
         </div>
     </div>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js" defer></script>
 </body>
 </html>
